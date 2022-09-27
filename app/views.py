@@ -16,10 +16,14 @@ def projects(request):
     projects = list(models.Project.objects.values())
     return JsonResponse(projects,safe=False)
 
+def projects_view(request):
+    projects = models.Project.objects.all()
+    return render(request, 'projects.html',{'projects':projects})
+
 def tasks(request,id):
     task = get_object_or_404(models.Task,id=id)
     return HttpResponse('task: %s'% task.t)
 
 def home(request):
-
-    return render(request, 'index.html')
+    name = "Giovanni La maravilla"
+    return render(request, 'index.html',{'name':name})
