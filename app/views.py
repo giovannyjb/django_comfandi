@@ -18,4 +18,8 @@ def projects(request):
 
 def tasks(request,id):
     task = get_object_or_404(models.Task,id=id)
-    return HttpResponse('task: %s'% task.title)
+    return HttpResponse('task: %s'% task.t)
+
+def home(request):
+
+    return render(request, 'index.html')
