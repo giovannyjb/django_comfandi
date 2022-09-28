@@ -33,7 +33,7 @@ def create_task(request):
     else:
         models.Task.objects.create(title = request.POST['title'], description = request.POST['description'],project_id=1)
 
-        return redirect('/gio/projects')
+        return redirect('holi')
 
 
 def home(request):

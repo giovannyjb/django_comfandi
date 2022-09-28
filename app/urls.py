@@ -9,5 +9,5 @@ urlpatterns = [
     path('create_task/',views.create_task),
     path('projects/', views.projects ),
     path('projects_view/',views.projects_view),
-    path('home/',views.home)
+    path('home/',views.home,name = 'holi')
 ]
